@@ -1,0 +1,349 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+/* color */
+:root {
+    --Lineargradient:hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --Red:hsl(0, 100%, 66%);
+    --White:hsl(0, 0%, 100%);
+    --Lightgrayishviolet: hsl(270, 3%, 87%);
+    --Darkgrayishviolet: hsl(279, 6%, 55%);
+    --Verydarkviolet: hsl(278, 68%, 11%);
+}
+* {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+@media screen and (min-width: 375px) and (max-width: 575px){
+    
+    .mobile-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -200;
+        background-image: url(./images/bg-main-mobile.png);
+        width: 600px;
+        height: 240px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    .bg-main-desktop {
+        display: none;
+    }
+    #card-back {
+        background-image: url(./images/bg-card-back.png);
+        position: absolute;
+        top: 50px;
+        left: 130px;
+        z-index: -1;
+    }
+    #card-front {
+        margin-top: 39%;
+        margin-left: 23%;
+    }
+    input {
+        padding: 3% 0;
+        border-radius: 8px;
+        font-size: 24px;
+    }
+    
+    .input {
+        width: 500px;
+        margin-left: 20%;
+    }
+    .input-name {
+        margin-top: 10%;
+    }
+    .input-name, .input-number {
+        height: 130px;
+    }
+    .card-exp {
+        height: 100px;
+    }
+    input::placeholder {
+        font-size: 24px;
+    }
+    .card-info {
+        margin-bottom: 7.5%;
+    }
+    button {
+        font-size: 24px;
+    } 
+    .attribution {
+        left: 150px;
+    }
+    .card-expire-container {
+        height: 100%;
+    }
+}
+
+
+@media screen and (min-width: 1240px) {
+    .bg-main-desktop {
+        display: inline;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mobile-bg {
+        display: none;
+    }
+    #card-back {
+        margin-left: 20%;
+        position: relative;
+    }
+
+    input {
+        padding: 3% 0;
+        border-radius: 7px;
+        font-size: 18px;
+    }
+    .input {
+        width: 600px;
+    }
+    #confirm {
+        width: 600px;
+    }
+    .input-name, .input-number {
+        height: 110px;
+    }
+    .card-exp {
+        height: 100px;
+    }
+    label {
+        font-size: 12px;
+    }
+    input::placeholder {
+    font-size: 18px;
+    }
+    .card-info {
+        margin-bottom: 3.5%;
+    }
+    button {
+        font-size: 18px;
+    }
+}
+
+
+.card-section {
+    margin-right: 20%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* card-front */
+#card-front {
+    background-image: url(./images/bg-card-front.png);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6% 6% 0 6% ;
+}
+
+#card-code {
+    color: var(--White);
+}
+
+#card-number {
+    color: var(--White);
+    font-size: 1.8rem;
+}
+
+.card-front-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6% 0 13% 0;
+}
+
+#card-name, #card-expire, #card-number {
+    letter-spacing: 3px;
+}
+
+#card-name, #card-expire {
+    font-size: 15px;
+    opacity: .9;
+    color: var(--Lightgrayishviolet);
+}
+
+#card-expire {
+    margin-right: 15%;
+}
+
+#card-back {
+    background-image: url(./images/bg-card-back.png);
+}
+
+#card-code {
+    top: 45%;
+    right: 13%;
+    position: absolute;
+}
+
+#card-front, #card-back {
+    background-repeat: no-repeat;
+    height: 245px;
+    width: 447px;
+}
+
+label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+label, #card-name {
+    text-transform: uppercase;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* input field */
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+input {
+    border: 2.5px solid var(--Lightgrayishviolet);
+    width: 100%;
+    margin: 2% 0;
+    padding-left: 5%;
+    padding-right: -15%;
+}
+
+input::placeholder {
+    opacity: .6;
+}
+
+input:focus {
+  border: 2.5px solid transparent;
+  border-radius: 6px;
+  background: 
+    linear-gradient(to right, white, white), 
+    linear-gradient(to right, hsl(249, 99%, 64%) , hsl(278, 94%, 30%)); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  outline: none;
+}
+
+.card-expire-container {
+    display: inline-flex;
+    margin-right: 10%;
+    width: 180px;
+    margin-top: 5%;
+}
+
+.card-expire-container input, #cvc {
+    margin-right: 10px;
+    padding: 5%;
+}
+
+#cvc {
+    margin-top: 4%;
+}
+
+button {
+    width: 106%;
+    border: none;
+    background-color: var(--Verydarkviolet);
+    color: var(--White);
+    padding: 3.5% 0;
+    border-radius: 8px;
+    letter-spacing: 1px;
+}
+
+/* confirm */
+#confirm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirm h1 {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2.5px;
+    font-size: 1.8rem;
+}
+
+#confirm p {
+    color: var(--Darkgrayishviolet);
+}
+
+#confirm * {
+    margin-bottom: 7%;
+}
+
+#errors {
+    position: relative;
+    bottom: 15px;
+    color: var(--Red);
+    font-size: 0.7rem;
+    top: -3px;
+}
+
+.cvc {
+    margin-left: 6%;
+    height: 100px;
+}
+
+.card-exp span {
+    position: relative;
+    bottom: 15px;
+    color: var(--Red);
+    font-size: 0.7rem;
+    top: 3px;
+}
+
+.card-exp {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: fixed;
+    bottom: 0;
+}
+    .attribution a { color: var(--Darkgrayishviolet); }
