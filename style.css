@@ -250,7 +250,7 @@ input {
 }
 
 input::placeholder {
-    opacity: .6;
+    opacity: .4;
 }
 
 input:focus {
@@ -313,7 +313,7 @@ button {
     margin-bottom: 7%;
 }
 
-#errors {
+.errors {
     position: relative;
     bottom: 15px;
     color: var(--Red);
